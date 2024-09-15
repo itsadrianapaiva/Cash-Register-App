@@ -81,6 +81,13 @@ const displayCashInDrawer = () => {
 
 window.onload = displayCashInDrawer;
 
+const digits = document.querySelectorAll(".digit-btn");
+digits.forEach((digit) => {
+  digit.addEventListener("click", () => {
+    cash.value += digit.textContent;
+  });
+});
+
 purchaseBtn.addEventListener("click", checkRegister);
 
 cash.addEventListener("keydown", e => {
